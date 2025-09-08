@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="13.96" multi-file="no" uid="simp75ee5ad46ade4be9a9404af8ba937694">
+  <meta>
+    <name>Diagrama </name>
+    <authors>Diego Alejandro</authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="erd-entity" type="Entity" />
+        <value>5</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="erd-entity" type="Entity" />
+        <value>6</value>
+      </counter>
+      <counter>
+        <item-type type-id="erd-relationship" type="Relationship" />
+        <value>12</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.Other.EntityRelationshipDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Erd.ErdEntityAttribute</type>
+        <value>20</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-90a647d4ddfb4f91ac0b97af79157e89" name="" task-id-sequence="0">
+    <working-schedule uid="ws-38c331f01fdb4edbbd343c8b9d215dbe" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+    <persons>
+      <person id="">
+        <first-name>Diego</first-name>
+        <last-name>Alejandro</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-a49c8cc38e314c12a48c9a471646a0d1" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Diego</first-name>
+        <last-name>Alejandro</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-c3531e5531724f66887a13bfc06d8a23" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <parameters />
+      <types />
+    </custom-types>
+  </types>
+  <items />
+  <models>
+    <model id="p44b19918481b4531b6261e903c35d5d1_910824139" name="Model1" namespace="" order-index="1" expanded="true">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>08/28/2025 15:56:10</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="entity-relationship" id="pcc339237692c4edd87e5f77dd71b7079_864605565" name="EntityRelationshipDiagram1" order-index="1" expanded="true" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="131,112">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>08/28/2025 15:56:10</creation-date>
+          <change-date>09/01/2025 13:25:01</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="489b47159e3c4d56a76398ec5fafe4e7" cid="ENT005" type="erd-entity" name="Raza" creator="" creation-date="09/01/2025 13:22:20">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a65666ba11dd4404fb4b4a880d5a92c98941" cid="EA018" name="Id" type="Integer" type-id="Uml.Integer" primary-key="true" nullable="false" auto-increment="true" creation-date="09/01/2025 13:23:05" />
+              <attribute uid="a55b974c43a724dc8a61cf2bc4e4295ee63" cid="EA019" name="Raza" type="Char" type-id="Uml.Char" type-size="20" nullable="false" creation-date="09/01/2025 13:23:34" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="e4c0428e8fde45d9a9dce4df79ff0f8e" cid="ENT004" type="erd-entity" name="Administrador" creator="" creation-date="08/28/2025 16:18:24">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a85c5fd01a9244559a6ceb887bc0560ee34" cid="EA015" name="Id" type="Integer" type-id="Uml.Integer" type-size="1" primary-key="true" nullable="false" auto-increment="true" creation-date="08/28/2025 16:18:55" />
+              <attribute uid="aeca49fcf420f44ea9ee91cace28b129d613" cid="EA016" name="Usuario" type="Char" type-id="Uml.Char" type-size="20" nullable="false" creation-date="08/28/2025 16:19:14" />
+              <attribute uid="a8c7ec0f473e34517843b05973dbd21f79" cid="EA017" name="Contraseña" type="Char" type-id="Uml.Char" type-size="20" nullable="false" creation-date="08/28/2025 16:19:23" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="2c4948b7f1e0413a8cd8c30ada161bc2" cid="REL011" type="erd-relationship" creator="" creation-date="09/01/2025 13:25:01" from="489b47159e3c4d56a76398ec5fafe4e7" to="a48866bcd614491a8854a40b08ece67b">
+            <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="1..*">
+              <attribute-pairs>
+                <attribute-pair from-attribute="a65666ba11dd4404fb4b4a880d5a92c98941" to-attribute="a3283ada767cc4636945d9caf7e486797964" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="12ee61a30d8440d3af3d0a46221dc8f9" cid="REL010" type="erd-relationship" creator="" creation-date="09/01/2025 13:22:08" from="fab1702926974e969411f53c89a1a73a" to="a48866bcd614491a8854a40b08ece67b">
+            <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="1..*">
+              <attribute-pairs>
+                <attribute-pair from-attribute="aff2c3b5c3f074492ba77cf079e0d91d9127" to-attribute="aa2b9d4c996274fbabd5bfdcc5a433b44456" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="a48866bcd614491a8854a40b08ece67b" cid="ENT002" type="erd-entity" name="Porcino" creator="" creation-date="08/28/2025 15:56:50">
+            <entity description="" />
+            <attributes>
+              <attribute uid="ac79859479e8145fa85148c793f9ee86e592" cid="EA004" name="Identificacion" type="Char" type-id="Uml.Char" type-size="5" primary-key="true" nullable="false" creation-date="08/28/2025 16:02:23" />
+              <attribute uid="a3283ada767cc4636945d9caf7e486797964" cid="EA005" name="Raza_id" type="Char" type-id="Uml.Char" type-size="20" foreign-key="true" nullable="false" creation-date="08/28/2025 16:02:38" />
+              <attribute uid="aeda8060652d947ba82d54505bdf944b0679" cid="EA006" name="Edad" type="Integer" type-id="Uml.Integer" nullable="false" creation-date="08/28/2025 16:02:48" />
+              <attribute uid="a5240fb8d27a3491cbc02af9da2e0305a145" cid="EA007" name="Peso" type="Real" type-id="Uml.Real" type-size="5,2" nullable="false" creation-date="08/28/2025 16:02:58" />
+              <attribute uid="a64ff6d6d7ae94e93966cf143f48b61a5621" cid="EA008" name="Cliente_Cedula" type="Char" type-id="Uml.Char" type-size="10" foreign-key="true" nullable="false" creation-date="08/28/2025 16:03:14" />
+              <attribute uid="aa2b9d4c996274fbabd5bfdcc5a433b44456" cid="EA009" name="Alimentacion_Tipo" type="Integer" type-id="Uml.Integer" type-size="2" foreign-key="true" nullable="false" creation-date="08/28/2025 16:03:45" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="fab1702926974e969411f53c89a1a73a" cid="ENT003" type="erd-entity" name="Alimentacion" creator="" creation-date="08/28/2025 15:56:52">
+            <entity description="" />
+            <attributes>
+              <attribute uid="aff2c3b5c3f074492ba77cf079e0d91d9127" cid="EA001" name="Tipo" type="Integer" type-id="Uml.Integer" type-size="2" primary-key="true" nullable="false" creation-date="08/28/2025 15:58:25" />
+              <attribute uid="ac8a1687f29a04ca6be59af5c7a746139958" cid="EA002" name="Descripcion" type="Char" type-id="Uml.Char" type-size="100" nullable="false" creation-date="08/28/2025 15:59:22" />
+              <attribute uid="a8f9e9ac3b8d54189a133517946cd4db0885" cid="EA003" name="Dosis" type="Real" type-id="Uml.Real" type-size="5,2" nullable="false" creation-date="08/28/2025 16:00:05" />
+            </attributes>
+            <indexes />
+          </item>
+          <item id="2dde246916f4429a9a01eb41ef58e80d" cid="REL009" type="erd-relationship" creator="" creation-date="08/28/2025 16:17:22" from="431bd674573d4c8993315e39c0e30774" to="a48866bcd614491a8854a40b08ece67b">
+            <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="1..*">
+              <attribute-pairs>
+                <attribute-pair from-attribute="a60c78e89b972486c9dcf7fb1ae2511ed659" to-attribute="a64ff6d6d7ae94e93966cf143f48b61a5621" />
+              </attribute-pairs>
+            </erd-relation>
+          </item>
+          <item id="431bd674573d4c8993315e39c0e30774" cid="ENT001" type="erd-entity" name="Cliente" creator="" creation-date="08/28/2025 15:56:19">
+            <entity description="" />
+            <attributes>
+              <attribute uid="a60c78e89b972486c9dcf7fb1ae2511ed659" cid="EA010" name="Cedula" type="Char" type-id="Uml.Char" type-size="10" primary-key="true" nullable="false" creation-date="08/28/2025 16:09:49" />
+              <attribute uid="a1a94a0e17618446798bcafbe4426a65e500" cid="EA011" name="Nombre" type="Char" type-id="Uml.Char" type-size="50" nullable="false" creation-date="08/28/2025 16:10:31" />
+              <attribute uid="ac82ac1da891c4a82bfb000009ab0734f890" cid="EA012" name="Apellidos" type="Char" type-id="Uml.Char" type-size="50" nullable="false" creation-date="08/28/2025 16:10:40" />
+              <attribute uid="a9ebcf5cfeec348f896e2471a45aa946d170" cid="EA013" name="Direccion" type="Char" type-id="Uml.Char" type-size="50" nullable="false" creation-date="08/28/2025 16:10:51" />
+              <attribute uid="a77e33643ffbf46bd8926f54e4180641b112" cid="EA014" name="Telefono" type="Char" type-id="Uml.Char" type-size="15" nullable="false" creation-date="08/28/2025 16:11:01" />
+            </attributes>
+            <indexes />
+          </item>
+        </abstract-items>
+        <layer id="75d6620266a14156b4a86e9bcfce9de0" name="Default" visible="true" enabled="true" locked="false">
+          <item id="431bd674573d4c8993315e39c0e30774" iid="dfeed4ea77d24685b1a3a239e5b151f5" creation-date="08/28/2025 15:56:19" order-index="0" type="entity">
+            <layout ax="222" ay="382" awidth="212" aheight="160" x="222" y="382" width="212" height="160" rotation-center="-36,0" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="a48866bcd614491a8854a40b08ece67b" iid="5cafd300b405448396be1185499074ff" creation-date="08/28/2025 15:56:50" order-index="1" type="entity">
+            <layout ax="534" ay="307" awidth="277" aheight="161" x="534" y="307" width="140" height="160" rotation-center="0,0.5" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="fab1702926974e969411f53c89a1a73a" iid="a506bc000e1745ba958759684c7e1c60" creation-date="08/28/2025 15:56:52" order-index="2" type="entity">
+            <layout ax="966" ay="398.5" awidth="238" aheight="104" x="966" y="398.5" width="238" height="104" rotation-center="-49,28" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="2dde246916f4429a9a01eb41ef58e80d" iid="be73d49b3f874f1ea95fb86f7e88aa61" creation-date="08/28/2025 16:17:22" order-index="4" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" lock-end-point="true" lock-to-fields="true" auto-path="" x1="434" y1="422" x2="534" y2="424" start-border-pos="0.31328125" end-border-pos="0.819099378881988" start-local-pos="40" end-local-pos="117" name-position="0,20">
+              <points>
+                <point x="434" y="422" />
+                <point x="534" y="424" />
+              </points>
+            </layout>
+            <relation from="431bd674573d4c8993315e39c0e30774" from-iid="dfeed4ea77d24685b1a3a239e5b151f5" from-field="a60c78e89b972486c9dcf7fb1ae2511ed659" to="a48866bcd614491a8854a40b08ece67b" to-iid="5cafd300b405448396be1185499074ff" to-field="a64ff6d6d7ae94e93966cf143f48b61a5621" />
+          </item>
+          <item id="e4c0428e8fde45d9a9dce4df79ff0f8e" iid="13e80e2e2625424aa324148b7ed84a7c" creation-date="08/28/2025 16:18:24" order-index="5" type="entity">
+            <layout ax="534" ay="542" awidth="277" aheight="104" x="534" y="542" width="277" height="104" rotation-center="-68.5,28" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="12ee61a30d8440d3af3d0a46221dc8f9" iid="49893da6d7d247fc8afdab52274da01b" creation-date="09/01/2025 13:22:08" order-index="6" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="966" y1="438" x2="811" y2="442" start-border-pos="0.903846153846154" end-border-pos="0.460403726708075" start-local-pos="39.5" end-local-pos="135" name-position="0,20">
+              <points>
+                <point x="966" y="438" />
+                <point x="811" y="442" />
+              </points>
+            </layout>
+            <relation from="fab1702926974e969411f53c89a1a73a" from-iid="a506bc000e1745ba958759684c7e1c60" from-field="aff2c3b5c3f074492ba77cf079e0d91d9127" to="a48866bcd614491a8854a40b08ece67b" to-iid="5cafd300b405448396be1185499074ff" to-field="aa2b9d4c996274fbabd5bfdcc5a433b44456" />
+          </item>
+          <item id="489b47159e3c4d56a76398ec5fafe4e7" iid="65aa48b895fa40bd85a7e4586f9efafe" creation-date="09/01/2025 13:22:20" order-index="7" type="entity">
+            <layout ax="986" ay="228" awidth="249" aheight="104" x="986" y="228" width="249" height="104" rotation-center="-54.5,28" />
+            <erd-entity show-nullability="true" />
+          </item>
+          <item id="2c4948b7f1e0413a8cd8c30ada161bc2" iid="c6ee035a0618401c9d16a27332952c26" creation-date="09/01/2025 13:25:01" order-index="8" type="relation">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="true" auto-path="" x1="986" y1="268" x2="811" y2="366" start-border-pos="0.902644230769231" end-border-pos="0.342391304347826" start-local-pos="40" end-local-pos="59" name-position="0,20">
+              <points>
+                <point x="986" y="268" />
+                <point x="811" y="366" />
+              </points>
+            </layout>
+            <relation from="489b47159e3c4d56a76398ec5fafe4e7" from-iid="65aa48b895fa40bd85a7e4586f9efafe" from-field="a65666ba11dd4404fb4b4a880d5a92c98941" to="a48866bcd614491a8854a40b08ece67b" to-iid="5cafd300b405448396be1185499074ff" to-field="a3283ada767cc4636945d9caf7e486797964" />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
