@@ -1,0 +1,9 @@
+@echo off
+echo Iniciando Backend Spring Boot...
+echo.
+echo Verificando Java...
+java -version
+echo.
+echo Compilando y ejecutando aplicacion...
+mvnw.cmd spring-boot:run
+pause

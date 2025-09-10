@@ -1,6 +1,6 @@
 package com.Granja.Back.Repositories;
 
-import com.Granja.Back.Entities.Porcino;
+//import com.Granja.Back.Entities.Porcino;
 import com.Granja.Back.Entities.Raza;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
