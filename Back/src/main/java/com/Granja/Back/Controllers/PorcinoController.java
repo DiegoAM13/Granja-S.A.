@@ -1,10 +1,10 @@
 package com.Granja.Back.Controllers;
 
 import com.Granja.Back.DTOS.PorcinoDTO;
-import com.Granja.Back.Entities.Cliente;
-import com.Granja.Back.Entities.Porcino;
+//import com.Granja.Back.Entities.Cliente;
+//import com.Granja.Back.Entities.Porcino;
 import com.Granja.Back.Services.PorcinoService;
-import com.fasterxml.jackson.core.SerializableString;
+//import com.fasterxml.jackson.core.SerializableString;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Porcino")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "file://", "null"})
 
 public class PorcinoController {
 
@@ -55,7 +55,7 @@ public class PorcinoController {
     public ResponseEntity<?>EliminarPorcino(@PathVariable String identificacion)
     {
         try{
-            PorcinoDTO porcinoDTO= porcinoService.EliminarPorcino(identificacion);
+            //PorcinoDTO porcinoDTO= porcinoService.EliminarPorcino(identificacion);
             return ResponseEntity.ok().body("Porcino eliminado");
         }catch (EntityNotFoundException e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());

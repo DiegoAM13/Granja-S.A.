@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test DAO Endpoints - Granja S.A.</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 20px; background: linear-gradient(135deg, #2d5016, #4a7c59); color: white; }
+        .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; }
+        h1 { text-align: center; color: #a8d5a8; }
+        .endpoint { background: rgba(255,255,255,0.1); margin: 10px 0; padding: 15px; border-radius: 8px; }
+        button { background: #4a7c59; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
+        button:hover { background: #6b9b6b; }
+        .result { background: rgba(0,0,0,0.3); padding: 10px; margin-top: 10px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; }
+        .status { padding: 5px 10px; border-radius: 3px; margin-left: 10px; }
+        .success { background: #4CAF50; }
+        .error { background: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐷 Test Endpoints DAO - Granja S.A.</h1>
+        <p>Prueba los nuevos endpoints DAO que acceden directamente a PostgreSQL</p>
+
+        <div class="endpoint">
+            <h3>🔗 Test Conexión DAO</h3>
+            <button onclick="testEndpoint('/dao/test-conexion', 'conexion')">Probar Conexión</button>
+            <div id="conexion-result" class="result"></div>
+        </div>
+
+        <div class="endpoint">
+            <h3>👥 Clientes DAO</h3>
+            <button onclick="testEndpoint('/dao/clientes', 'clientes')">Obtener Clientes</button>
+            <button onclick="testEndpoint('/dao/clientes/12345678', 'cliente-single')">Cliente por Cédula</button>
+            <div id="clientes-result" class="result"></div>
+            <div id="cliente-single-result" class="result"></div>
+        </div>
+
+        <div class="endpoint">
+            <h3>🐷 Porcinos DAO</h3>
+            <button onclick="testEndpoint('/dao/porcinos', 'porcinos')">Obtener Porcinos</button>
+            <button onclick="testEndpoint('/dao/porcinos/cliente/12345678', 'porcinos-cliente')">Porcinos por Cliente</button>
+            <div id="porcinos-result" class="result"></div>
+            <div id="porcinos-cliente-result" class="result"></div>
+        </div>
+
+        <div class="endpoint">
+            <h3>🍽️ Alimentación DAO</h3>
+            <button onclick="testEndpoint('/dao/alimentaciones', 'alimentaciones')">Obtener Alimentaciones</button>
+            <div id="alimentaciones-result" class="result"></div>
+        </div>
+
+        <div class="endpoint">
+            <h3>📊 Estadísticas DAO</h3>
+            <button onclick="testEndpoint('/dao/estadisticas', 'estadisticas')">Estadísticas Generales</button>
+            <button onclick="testEndpoint('/dao/peso-promedio', 'peso')">Peso Promedio</button>
+            <div id="estadisticas-result" class="result"></div>
+            <div id="peso-result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        const baseUrl = 'http://localhost:8080';
+        
+        async function testEndpoint(endpoint, resultId) {
+            const resultDiv = document.getElementById(resultId + '-result');
+            resultDiv.innerHTML = 'Cargando...';
+            
+            try {
+                const response = await fetch(baseUrl + endpoint);
+                const status = response.ok ? 'success' : 'error';
+                const statusText = response.ok ? '✅ SUCCESS' : '❌ ERROR';
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.innerHTML = `<span class="status ${status}">${statusText}</span>\n${JSON.stringify(data, null, 2)}`;
+                } else {
+                    const errorText = await response.text();
+                    resultDiv.innerHTML = `<span class="status ${status}">${statusText} (${response.status})</span>\n${errorText}`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<span class="status error">❌ NETWORK ERROR</span>\n${error.message}`;
+            }
+        }
+
+        // Test conexión automático al cargar
+        window.onload = () => {
+            testEndpoint('/dao/test-conexion', 'conexion');
+        };
+    </script>
+</body>
+</html>

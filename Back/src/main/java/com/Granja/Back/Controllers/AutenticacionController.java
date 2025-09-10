@@ -1,7 +1,7 @@
 package com.Granja.Back.Controllers;
 
 import com.Granja.Back.DTOS.LoginDTO;
-import com.Granja.Back.DTOS.PorcinoDTO;
+//import com.Granja.Back.DTOS.PorcinoDTO;
 import com.Granja.Back.Services.AuthService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/Admin")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "file://", "null"})
 public class AutenticacionController {
 
     @Autowired

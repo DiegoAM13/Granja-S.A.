@@ -1,12 +1,12 @@
 package com.Granja.Back.Controllers;
 
 
-import com.Granja.Back.Entities.Alimentacion;
+//import com.Granja.Back.Entities.Alimentacion;
 import com.Granja.Back.Entities.Raza;
-import com.Granja.Back.Repositories.RazaRepository;
+//import com.Granja.Back.Repositories.RazaRepository;
 import com.Granja.Back.Services.RazaService;
 import jakarta.persistence.EntityNotFoundException;
-import org.apache.coyote.Response;
+//import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Raza")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "file://", "null"})
 public class RazaController {
 
     @Autowired
@@ -42,7 +42,7 @@ public class RazaController {
     public ResponseEntity<?> EliminarRaza(@PathVariable  Integer id)
     {
         try{
-            Raza raza= razaService.EliminarRaza(id);
+            //Raza raza= razaService.EliminarRaza(id);
             return ResponseEntity.ok().body("Raza  eliminada");
         }catch (EntityNotFoundException e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());

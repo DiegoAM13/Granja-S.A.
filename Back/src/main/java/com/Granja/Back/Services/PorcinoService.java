@@ -12,7 +12,7 @@ import com.Granja.Back.Repositories.PorcinoRepository;
 import com.Granja.Back.Repositories.RazaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+//import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -3,7 +3,7 @@ package com.Granja.Back.Controllers;
 import com.Granja.Back.Entities.Cliente;
 import com.Granja.Back.Services.ClienteService;
 import jakarta.persistence.EntityNotFoundException;
-import org.apache.coyote.Response;
+//import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Clientes")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "file://", "null"})
 public class ClienteController {
 
     @Autowired
@@ -40,7 +40,7 @@ public class ClienteController {
     public ResponseEntity<?> EliminarCliente(@PathVariable String Cedula)
     {
         try{
-            Cliente cliente= clienteService.EliminarCliente(Cedula);
+            //Cliente cliente= clienteService.EliminarCliente(Cedula);
             return ResponseEntity.ok().body("Cliente eliminado");
         }catch (EntityNotFoundException e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());

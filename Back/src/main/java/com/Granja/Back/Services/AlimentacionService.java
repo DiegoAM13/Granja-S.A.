@@ -1,7 +1,7 @@
 package com.Granja.Back.Services;
 
 import com.Granja.Back.Entities.Alimentacion;
-import com.Granja.Back.Entities.Cliente;
+//import com.Granja.Back.Entities.Cliente;
 import com.Granja.Back.Repositories.AlimentacionRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

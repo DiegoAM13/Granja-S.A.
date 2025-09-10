@@ -1,7 +1,6 @@
 package com.Granja.Back.Controllers;
 
 import com.Granja.Back.Entities.Alimentacion;
-import com.Granja.Back.Entities.Cliente;
 import com.Granja.Back.Services.AlimentacionService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/Alimentacion")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "file://", "null"})
 public class AlimentacionController {
 
     @Autowired
@@ -40,7 +39,7 @@ public class AlimentacionController {
     public ResponseEntity<?> EliminarAlimento(@PathVariable  Integer Tipo)
     {
         try{
-            Alimentacion alimentacion= alimentacionService.EliminarAlimentacion(Tipo);
+            //Alimentacion alimentacion= alimentacionService.EliminarAlimentacion(Tipo);
             return ResponseEntity.ok().body("Alimentacion  eliminada");
         }catch (EntityNotFoundException e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
