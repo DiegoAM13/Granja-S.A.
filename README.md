@@ -19,7 +19,7 @@ Sistema completo de gestión para granja porcina desarrollado con **Spring Boot*
 ## 🏗️ Arquitectura
 
 ### Backend (Spring Boot)
-- **Puerto**: 8081
+- **Puerto**: 8080
 - **Base de datos**: PostgreSQL (principal) / H2 (testing)
 - **Arquitectura**: Modelo por capas con clean code
 - **Seguridad**: Spring Security (configurado para desarrollo)
